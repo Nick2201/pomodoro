@@ -1,0 +1,9 @@
+# profile for development environment
+
+title = "TOML Statement"
+
+[src]
+    [src.model]
+        [src.model.music]
+        music_folder = 'music_folder'
+

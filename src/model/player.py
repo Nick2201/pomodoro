@@ -1,14 +1,13 @@
 import os, random
 from pathlib import Path
 
-
 class Playlist:
     def __init__(self,
                  play_list_name:str,
-                 music_folder='music_folder'):
+                 music_folder):
 
         self.play_list_name = play_list_name
-        self.abs_path = Path(music_folder).absolute()
+        self.abs_path = Path(music_folder)
         self.track_list = [track for track in self.abs_path.iterdir() if track.is_file()]
 
 
@@ -21,7 +20,7 @@ class Playlist:
         print(len(self.track_list))
 
 
-# play_list_default = Playlist(play_list_name='Default')
+# play_list_default = Playlist(play_list_name='Default',)
 
 
 
