@@ -1,0 +1,45 @@
+@startuml Pomodoro
+class TimeBox
+
+entity MusePlayer
+package EventPack <<Node>>{
+    entity muse_time
+    entity think_time
+    entity main {
+        job
+        rest
+
+        big_rest
+        think_time
+        meal
+    }
+}
+class Plan {
+
+}
+
+class PlanUnit
+
+Interface Event {
+    +name : str
+    +time : sec
+
+}
+
+class Launcher {
+    +sequence : iter
+    +{method} launch()
+}
+entity Vizualizer
+class Pom_unit {
+    sequence : [Event,Event]
+
+}
+/'
+Pom_unit(
+    sequence = [job] # get any Event ->
+    job.time - play_music.time:play_music.run()
+)
+
+'/
+@enduml

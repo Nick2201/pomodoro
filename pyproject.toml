@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pomodoro-new"
+version = "0.1.0"
+description = ""
+authors = ["Nick <nicklisits@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pomodoro_new"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pygame = "^2.1.3"
+tqdm = "^4.66.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
